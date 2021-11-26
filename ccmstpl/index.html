@@ -1,0 +1,349 @@
+{CCMS_DB_PRELOAD:all,index}{CCMS_LIB:site.php;FUNC:csp_header}<!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<!-- Place repeated header content here. -->
+		{CCMS_TPL:header-head.html}
+
+		<!-- Should be representative of the page in reference. -->
+		<title>{CCMS_DB:all,company-name} / Homepage</title>
+		<meta name="description" content="{CCMS_DB:index,description}" />
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="{CCMS_DB:all,company-name} / Homepage" />
+		<meta itemprop="description" content="{CCMS_DB:index,description}" />
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/" />
+		<meta property="og:title" content="{CCMS_DB:all,company-name} / Homepage" />
+		<meta property="og:description" content="{CCMS_DB:index,description}" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:title" content="{CCMS_DB:all,company-name} / Homepage" />
+		<meta name="twitter:description" content="{CCMS_DB:index,description}" />
+
+		<script type="application/ld+json">
+		[
+			{
+				"@context":"https://schema.org",
+				"@type":"WebSite",
+				"name":"{CCMS_DB:all,company-name}",
+				"url":"https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/",
+				"alternateName":"{CCMS_DB:all,company-name} / Homepage"
+			},{
+				"@context":"https://schema.org",
+				"@type":"Organization",
+				"name":"{CCMS_DB:all,company-name}",
+				"description":"{CCMS_DB:index,description}",
+				"url":"https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/",
+				"logo":{
+					"@type":"ImageObject",
+					"url":"{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/logo1.png"
+				}
+				{CCMS_TPL:/_css/header-schema.html}
+			}
+		]
+		</script>
+
+		<style nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
+			{CCMS_TPL:/_css/header.html}
+
+			.carousel{
+				box-shadow:0 2px 12px rgba(0,0,0,.4);
+				height:500px;
+				position:absolute;
+				top:0;
+				width:100%
+			}
+
+			.carousel>.carousel-item{
+				height:500px;
+				background-position:center;
+				background-repeat:no-repeat;
+				background-size:cover;
+				opacity:0;
+				overflow:hidden;
+				position:absolute;
+				transition:all 1s ease-in-out;
+				-moz-transition:all 1s ease-in-out;
+				-o-transition:all 1s ease-in-out;
+				-webkit-transition:all 1s ease-in-out;
+				width:100%
+			}
+
+			.carousel-large{
+				display:none;
+				position:relative;
+				top:150px
+			}
+
+			.carousel-medium{
+				display:none;
+				position:relative;
+				top:150px
+			}
+
+			.carousel-small{
+				display:block;
+				position:relative;
+				top:150px
+			}
+
+			.carousel-large>h1,
+			.carousel-large>h2,
+			.carousel-large>h3,
+			.carousel-medium>h1,
+			.carousel-medium>h2,
+			.carousel-medium>h3,
+			.carousel-small>h1,
+			.carousel-small>h2,
+			.carousel-small>h3{
+				color:var(--cl0);
+				font-weight:600;
+				margin:0 0 20px 130px;
+				text-align:unset;
+				text-shadow:2px 2px 4px rgb(0,0,0)
+			}
+
+			.carousel-large>p,.carousel-medium>p,.carousel-small>p{margin:0 80px}
+
+			.learnMore{
+				background:var(--cl0);
+				border:solid 1px var(--cl6);
+				font-size:1rem;
+				font-weight:bold;
+				padding:5px;
+			}
+
+			#carousel-next,#carousel-prev{
+				background-color:rgba(0,0,0,0.2);
+				border-radius:0 3px 3px 0;
+				color:white;
+				cursor:pointer;
+				font-size:22px;
+				font-weight:bold;
+				margin-top:-50px;
+				padding:30px 20px;
+				position:absolute;
+				top:50%;
+				transition:0.6s ease;
+				user-select:none;
+				width:auto;
+				z-index:3
+			}
+
+			#carousel-next:hover,#carousel-prev:hover{background-color:rgba(0,0,0,0.8)}
+
+			.webp .carousel-01{
+				background-image:linear-gradient(to left,
+					rgba(255,255,255,0)40%,
+					rgba(255,255,255,.7)60%),
+					url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/projects/tesoro-navio-5/interior-suite-concept.webp");
+			}
+
+			.no-webp .carousel-01{
+				background-image:linear-gradient(to left,
+					rgba(255,255,255,0)40%,
+					rgba(255,255,255,.7)60%),
+					url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/projects/tesoro-navio-5/interior-suite-concept.jpg");
+			}
+
+			.webp .carousel-02{
+				background-image:linear-gradient(to left,
+					rgba(255,255,255,0)40%,
+					rgba(255,255,255,.7)60%),
+					url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/projects/tesoro-navio-5/lounge-area-concept.webp");
+			}
+
+			.no-webp .carousel-02{
+				background-image:linear-gradient(to left,
+					rgba(255,255,255,0)40%,
+					rgba(255,255,255,.7)60%),
+					url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/projects/tesoro-navio-5/lounge-area-concept.jpg");
+			}
+
+			.webp .carousel-03{
+				background-image:linear-gradient(to left,
+					rgba(255,255,255,0)40%,
+					rgba(255,255,255,.7)60%),
+					url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/projects/tesoro-navio-5/lobby-concept.webp");
+			}
+
+			.no-webp .carousel-03{
+				background-image:linear-gradient(to left,
+					rgba(255,255,255,0)40%,
+					rgba(255,255,255,.7)60%),
+					url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/projects/tesoro-navio-5/lobby-concept.jpg");
+			}
+
+
+			/* 769px or larger. */
+			@media only screen and (min-width:769px){
+				.carousel-large{display:none}
+				.carousel-medium{display:block}
+				.carousel-small{display:none}
+			}
+
+
+			/* 1025px or larger. */
+			@media only screen and (min-width:1025px){
+				.carousel-large{display:block}
+				.carousel-medium{display:none}
+				.carousel-small{display:none}
+			}
+			/* --------------
+			Carousel CSS END
+			----------------- */
+		</style>
+
+		<script nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
+			var navActiveArray = ["nl-projects","nl-projects_index","nl-projects_past"];
+			/*
+			var navActiveArray = ["nl-lng","lng-en"];
+			var navActiveFooterArray = ["fl-homepage"];
+			*/
+		</script>
+	</head>
+
+	<body>
+		<div id="loading_svg"></div>
+
+		<main id="cd-main-content" style="margin-top:500px">
+			<div class="contentType1">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			</div>
+			{CCMS_TPL:footer.html}
+		</main>
+
+		<div class="carousel">
+			<div class="carousel-01 carousel-item" style="opacity:1">
+				<div class="carousel-large">
+					<h1>Large carousel-01</h1>
+					<p>carousel-01: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+				<div class="carousel-medium">
+					<h2>Medium carousel-01</h2>
+					<p>carousel-01: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+				<div class="carousel-small">
+					<h3>Small carousel-01</h3>
+					<p>carousel-01: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+			</div>
+			<div class="carousel-02 carousel-item">
+				<div class="carousel-large">
+					<h1>Large carousel-02</h1>
+					<p>carousel-02: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+				<div class="carousel-medium">
+					<h2>Medium carousel-02</h2>
+					<p>carousel-02: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+				<div class="carousel-small">
+					<h3>Small Ccarousel-02</h3>
+					<p>carousel-02: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+			</div>
+			<div class="carousel-03 carousel-item">
+				<div class="carousel-large">
+					<h1>Large carousel-03</h1>
+					<p>carousel-03: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+				<div class="carousel-medium">
+					<h2>Medium carousel-03</h2>
+					<p>carousel-03: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+				<div class="carousel-small">
+					<h3>Small carousel-03</h3>
+					<p>carousel-03: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. <a href="#" class="learnMore">LEARN MORE</a></p>
+				</div>
+			</div>
+			<a id="carousel-prev">&#10094;</a>
+			<a id="carousel-next" style="right:0px">&#10095;</a>
+		</div>
+
+		{CCMS_TPL:header-body.html}
+
+		{CCMS_TPL:a2hs-box.html}
+
+		<script nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
+			/*window.performance.mark("mark_beginning_javascript");*/
+			{CCMS_TPL:/_js/footer.html}
+
+			function loadFirst(e,t,i,c){var a=document.createElement("script");a.async="true";a.setAttribute("nonce", "{CCMS_LIB:site.php;FUNC:csp_nounce}");if(i){a.integrity=i;a.crossOrigin=c;}a.readyState?a.onreadystatechange=function(){("loaded"==a.readyState||"complete"==a.readyState)&&(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.body.appendChild(a)}
+
+			/*
+			Argument details for build_css_link2() and build_js_link() function calls:
+			arg1 = (1 = append AWS link), (empty = do not append AWS link)
+			arg2 = (1 = append language code to link), (empty = do not append language code to link)	In other words, send it through the parser first like a normal template.
+			arg3 = a variable found in the config file that represents a partial pathway to the style sheet, not including and details about AWS, language code, or language direction)
+			arg4 = (1 = append language direction to link), (empty = do not append language direction to link)
+
+			Argument details for build_js_sri() function calls:
+			arg1 = 1 = build sri code based on version stored on AWS.	empty = build sri code based on version stored on our own server.
+			arg2 = a variable found in the config file that represents a partial pathway to the style sheet. (Not including details about AWS, language code, or language direction)
+			*/
+
+			{CCMS_LIB:site.php;FUNC:build_css_link("","1","CSS-01","1")}
+			{CCMS_LIB:site.php;FUNC:build_css_link("","","GDPR-CSS","")}
+
+			function loadJSResources(){
+				loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","MODERNIZER")}",function(){
+					loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","JQUERY")}",function(){
+						loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","1","JS-01")}",function(){
+							loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","GDPR-JS")}",function(){
+
+								/* General Data Protection Regulation (GDPR) Cookie Consent Banner */
+								window.wpcc.init({"colors":{"popup":{"background":"#ffe4e1","text":"#000000","border":"var(--cl6)"},"button":{"background":"var(--cl6)","text":"#ffffff"}},"position":"bottom","padding":"none","fontsize":"tiny","content":{"href":"/en/about-us/privacy-policy.html","message":"This site uses cookies to help maintain session persistance and language preferences. Services such as Google also place cookies here to help us improve your experience by providing insights into how the site is being used."}})
+
+								/*window.performance.mark("mark_end_javascript");
+								console.log(window.performance.getEntriesByName("mark_beginning_javascript"));
+								console.log(window.performance.getEntriesByName("mark_end_javascript"));*/
+							}{CCMS_LIB:site.php;FUNC:build_js_sri("","GDPR-JS")});
+						}{CCMS_LIB:site.php;FUNC:build_js_sri("","JS-01")});
+					}{CCMS_LIB:site.php;FUNC:build_js_sri("","JQUERY")});
+				}{CCMS_LIB:site.php;FUNC:build_js_sri("","MODERNIZER")});
+			}
+
+			/* Carousel START */
+			var speed=30000;
+			var carouselIndex=0;
+			var intervalID;
+			function carouselPlus(n){
+				clearInterval(intervalID);
+				carouselIndex+=n;
+				carousel(carouselIndex)
+			}
+			function carousel(n){
+				var i;
+				var carouselArray=document.getElementsByClassName("carousel-item");
+				if(n>carouselArray.length){carouselIndex=1}
+				if(n<1){carouselIndex=carouselArray.length}
+				if(carouselIndex>carouselArray.length){carouselIndex=1}
+				for(i=0;i<carouselArray.length;i++){
+					carouselArray[i].style.opacity="0";
+					carouselArray[i].style.zIndex="0"
+				}
+				window.setTimeout(function(){
+					carouselArray[carouselIndex-1].style.opacity="1";
+					carouselArray[carouselIndex-1].style.zIndex="1"
+				},500);
+				intervalID=window.setInterval(carouselPlus,speed,1)
+			}
+			carouselPlus(1);
+			document.getElementById("carousel-prev").addEventListener("click",function(){carouselPlus(-1)});
+			document.getElementById("carousel-next").addEventListener("click",function(){carouselPlus(1)});
+			/* Carousel END */
+
+			if(window.addEventListener){window.addEventListener("load",loadJSResources,false)}
+			else if(window.attachEvent){window.attachEvent("onload",loadJSResources)}
+			else{window.onload=loadJSResources}
+		</script>
+	</body>
+</html>

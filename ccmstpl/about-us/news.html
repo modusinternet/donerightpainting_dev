@@ -1,0 +1,146 @@
+{CCMS_DB_PRELOAD:all,TEMPLATE_DATABASE_CALL}<!-- {  CCMS_LIB:site.php;FUNC:csp_header} --><!DOCTYPE html>
+<html lang="en" prefix="og: http://ogp.me/ns#">
+	<head>
+		<!-- Place repeated header content here. -->
+		{CCMS_TPL:header-head.html}
+
+		<!-- Should be representative of the page in reference. -->
+		<title>{CCMS_DB:all,company-name} / TEMPLATE_TITLES / TEMPLATE_TITLES</title>
+		<meta name="description" content="{CCMS_DB:TEMPLATE_DATABASE_CALL,description}" />
+
+		<!-- Google / Search Engine Tags -->
+		<meta itemprop="name" content="{CCMS_DB:all,company-name} / TEMPLATE_TITLES / TEMPLATE_TITLES" />
+		<meta itemprop="description" content="{CCMS_DB:TEMPLATE_DATABASE_CALL,description}" />
+
+		<!-- Facebook Meta Tags -->
+		<meta property="og:url" content="https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/TEMPLATE_NAME/TEMPLATE_NAME" />
+		<meta property="og:title" content="{CCMS_DB:all,company-name} / TEMPLATE_TITLES / TEMPLATE_TITLES" />
+		<meta property="og:description" content="{CCMS_DB:TEMPLATE_DATABASE_CALL,description}" />
+
+		<!-- Twitter Meta Tags -->
+		<meta name="twitter:title" content="{CCMS_DB:all,company-name} / TEMPLATE_TITLES / TEMPLATE_TITLES" />
+		<meta name="twitter:description" content="{CCMS_DB:TEMPLATE_DATABASE_CALL,description}" />
+
+		<script type="application/ld+json">
+		[
+			{
+				"@context":"https://schema.org",
+				"@type":"WebSite",
+				"name":"{CCMS_DB:all,company-name}",
+				"url":"https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/TEMPLATE_NAME/TEMPLATE_NAME",
+				"alternateName":"{CCMS_DB:all,company-name} / TEMPLATE_TITLES / TEMPLATE_TITLES"
+			},{
+				"@context":"https://schema.org",
+				"@type":"Organization",
+				"name":"{CCMS_DB:all,company-name}",
+				"description":"{CCMS_DB:TEMPLATE_DATABASE_CALL,description}",
+				"url":"https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/TEMPLATE_NAME/TEMPLATE_NAME",
+				"logo":{
+					"@type":"ImageObject",
+					"url":"{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/logo1.png"
+				}
+				{CCMS_TPL:/_css/schema.html}
+			}
+		]
+		</script>
+
+		<style nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
+			{CCMS_TPL:/_css/header.html}
+
+			.webp .CSS_01{
+				background-image:url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/CSS_01.webp");
+			}
+
+			.no-webp .CSS_01{
+				background-image:url("{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/CSS_01.jpg");
+			}
+		</style>
+
+		<script nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
+			var navActiveArray = ["nl-about-us","nl-about-us_index","nl-about-us_news"];
+			/*
+			var navActiveArray = ["nl-lng","lng-en"];
+			var navActiveFooterArray = ["fl-privacy-policy"];
+			*/
+		</script>
+	</head>
+	<body>
+		<div id="loading_svg"></div>
+
+		<main id="cd-main-content">
+			<div class="parallax CSS_01"></div>
+
+			<div style="padding-bottom:15px">
+				<div class="bcGrid">
+					<h1 class="c1">TEMPLATE_TITLES</h1>
+					<i class="c2"></i>
+					<div class="c3" style="margin:8px 0 0">
+						<span style="color:#888888">/</span>
+						<a href="/en/TEMPLATE_NAME/TEMPLATE_NAME">TEMPLATE_TITLES</a>
+						<span style="color:#888888">/</span>
+						<a href="/en/TEMPLATE_NAME/TEMPLATE_NAME">TEMPLATE_TITLES</a>
+					</div>
+				</div>
+			</div>
+			<div class="contentType1">
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			<div class="contentType2">
+				<div>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</div>
+			</div>
+			{CCMS_TPL:footer.html}
+		</main>
+
+		{CCMS_TPL:header-body.html}
+
+		{CCMS_TPL:a2hs-box.html}
+
+		<script nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
+			/*window.performance.mark("mark_beginning_javascript");*/
+			{CCMS_TPL:/_js/footer.html}
+
+			function loadFirst(e,t,i,c){var a=document.createElement("script");a.async="true";a.setAttribute("nonce", "{CCMS_LIB:site.php;FUNC:csp_nounce}");if(i){a.integrity=i;a.crossOrigin=c;}a.readyState?a.onreadystatechange=function(){("loaded"==a.readyState||"complete"==a.readyState)&&(a.onreadystatechange=null,t())}:a.onload=function(){t()},a.src=e,document.body.appendChild(a)}
+
+			/*
+			Argument details for build_css_link2() and build_js_link() function calls:
+			arg1 = (1 = append AWS link), (empty = do not append AWS link)
+			arg2 = (1 = append language code to link), (empty = do not append language code to link)	In other words, send it through the parser first like a normal template.
+			arg3 = a variable found in the config file that represents a partial pathway to the style sheet, not including and details about AWS, language code, or language direction)
+			arg4 = (1 = append language direction to link), (empty = do not append language direction to link)
+
+			Argument details for build_js_sri() function calls:
+			arg1 = 1 = build sri code based on version stored on AWS.	empty = build sri code based on version stored on our own server.
+			arg2 = a variable found in the config file that represents a partial pathway to the style sheet. (Not including details about AWS, language code, or language direction)
+			*/
+
+			{CCMS_LIB:site.php;FUNC:build_css_link("","1","CSS-01","1")}
+			{CCMS_LIB:site.php;FUNC:build_css_link("","","GDPR-CSS","")}
+
+			function loadJSResources(){
+				loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","MODERNIZER")}",function(){
+					loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","JQUERY")}",function(){
+						loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","1","JS-01")}",function(){
+							loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","GDPR-JS")}",function(){
+
+								/* General Data Protection Regulation (GDPR) Cookie Consent Banner */
+								window.wpcc.init({"colors":{"popup":{"background":"#ffe4e1","text":"#000000","border":"var(--cl6)"},"button":{"background":"var(--cl6)","text":"#ffffff"}},"position":"bottom","padding":"none","fontsize":"tiny","content":{"href":"/en/about-us/privacy-policy.html","message":"This site uses cookies to help maintain session persistance and language preferences. Services such as Google also place cookies here to help us improve your experience by providing insights into how the site is being used."}})
+
+								/*window.performance.mark("mark_end_javascript");
+								console.log(window.performance.getEntriesByName("mark_beginning_javascript"));
+								console.log(window.performance.getEntriesByName("mark_end_javascript"));*/
+							}{CCMS_LIB:site.php;FUNC:build_js_sri("","GDPR-JS")});
+						}{CCMS_LIB:site.php;FUNC:build_js_sri("","JS-01")});
+					}{CCMS_LIB:site.php;FUNC:build_js_sri("","JQUERY")});
+				}{CCMS_LIB:site.php;FUNC:build_js_sri("","MODERNIZER")});
+			}
+
+			if(window.addEventListener){window.addEventListener("load",loadJSResources,false)}
+			else if(window.attachEvent){window.attachEvent("onload",loadJSResources)}
+			else{window.onload=loadJSResources}
+		</script>
+	</body>
+</html>
