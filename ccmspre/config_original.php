@@ -2,7 +2,7 @@
 // Domain name
 $CFG["DOMAIN"] = "";
 
-// Primary indexe for /ccmstpl/.
+// Primary index for /ccmstpl/.
 $CFG["INDEX"] = "index.html";
 
 // Document root folder globals.
