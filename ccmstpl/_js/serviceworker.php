@@ -31,7 +31,7 @@ Add these to the right box under Whitelist Headers, add as custom if necessary:
 Then click the 'Yes, Edit' button at the bottom and give it about 10 minutes to propagate through the system and test using Chrome.
 */
 
-const cacheName = '2021-12-02.v1';
+const cacheName = '2022-04-01.v1';
 
 /* Point this array item to your own 'offline' template if you plan on removing the 'examples' folder in your own development. */
 var cacheFiles = [

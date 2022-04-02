@@ -1,48 +1,11 @@
 {CCMS_DB_PRELOAD:all,offline}<!-- {  CCMS_LIB:site.php;FUNC:csp_header} --><!DOCTYPE html>
-<html lang="en" prefix="og: http://ogp.me/ns#">
+<html lang="{CCMS_LIB:_default.php;FUNC:ccms_lng}" prefix="og: http://ogp.me/ns#">
 	<head>
 		<!-- Place repeated header content here. -->
 		{CCMS_TPL:header-head.html}
 
 		<!-- Should be representative of the page in reference. -->
 		<title>{CCMS_DB:all,company-name} / Offline</title>
-		<meta name="description" content="{CCMS_DB:offline,description}" />
-
-		<!-- Google / Search Engine Tags -->
-		<meta itemprop="name" content="{CCMS_DB:all,company-name} / Offline" />
-		<meta itemprop="description" content="{CCMS_DB:offline,description}" />
-
-		<!-- Facebook Meta Tags -->
-		<meta property="og:url" content="https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/offline.html" />
-		<meta property="og:title" content="{CCMS_DB:all,company-name} / Offline" />
-		<meta property="og:description" content="{CCMS_DB:offline,description}" />
-
-		<!-- Twitter Meta Tags -->
-		<meta name="twitter:title" content="{CCMS_DB:all,company-name} / Offline" />
-		<meta name="twitter:description" content="{CCMS_DB:offline,description}" />
-
-		<script type="application/ld+json">
-		[
-			{
-				"@context":"https://schema.org",
-				"@type":"WebSite",
-				"name":"{CCMS_DB:all,company-name}",
-				"url":"https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/offline.html",
-				"alternateName":"{CCMS_DB:all,company-name} / Offline"
-			},{
-				"@context":"https://schema.org",
-				"@type":"Organization",
-				"name":"{CCMS_DB:all,company-name}",
-				"description":"{CCMS_DB:offline,description}",
-				"url":"https://{CCMS_LIB:_default.php;FUNC:ccms_cfgDomain}/en/offline.html",
-				"logo":{
-					"@type":"ImageObject",
-					"url":"{CCMS_LIB:site.php;FUNC:load_resource("AWS")}/ccmstpl/_img/logo1.png"
-				}
-				{CCMS_TPL:/_css/schema.html}
-			}
-		]
-		</script>
 
 		<style nonce="{CCMS_LIB:site.php;FUNC:csp_nounce}">
 			{CCMS_TPL:/_css/header.html}
@@ -115,7 +78,7 @@
 					<i class="c2"></i>
 					<h4 class="c3" style="margin:8px 0 0">
 						<span style="color:#888888">/</span>
-						<a href="/en/offline.html">Offline</a>
+						<a href="/{CCMS_LIB:_default.php;FUNC:ccms_lng}/offline.html">Offline</a>
 					</h4>
 				</div>
 			</div>
@@ -171,7 +134,7 @@
 							loadFirst("{CCMS_LIB:site.php;FUNC:build_js_link("","","GDPR-JS")}",function(){
 
 								/* General Data Protection Regulation (GDPR) Cookie Consent Banner */
-								window.wpcc.init({"colors":{"popup":{"background":"#ffe4e1","text":"#000000","border":"var(--cl6)"},"button":{"background":"var(--cl6)","text":"#ffffff"}},"position":"bottom","padding":"none","fontsize":"tiny","content":{"href":"/en/about-us/privacy-policy.html","message":"This site uses cookies to help maintain session persistance and language preferences. Services such as Google also place cookies here to help us improve your experience by providing insights into how the site is being used."}})
+								window.wpcc.init({"colors":{"popup":{"background":"#ffe4e1","text":"#000000","border":"var(--cl6)"},"button":{"background":"var(--cl6)","text":"#ffffff"}},"position":"bottom","padding":"none","fontsize":"tiny","content":{"href":"/{CCMS_LIB:_default.php;FUNC:ccms_lng}/about-us/privacy-policy.html","message":"This site uses cookies to help maintain session persistance and language preferences. Services such as Google also place cookies here to help us improve your experience by providing insights into how the site is being used."}})
 
 								/*window.performance.mark("mark_end_javascript");
 								console.log(window.performance.getEntriesByName("mark_beginning_javascript"));
