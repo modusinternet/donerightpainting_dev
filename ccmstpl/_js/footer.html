@@ -1,3 +1,4 @@
+/*
 if(navigator.serviceWorker){
 	window.addEventListener('load',() => {
 		navigator.serviceWorker
@@ -7,4 +8,15 @@ if(navigator.serviceWorker){
 	});
 } else {
 	console.log('Service Worker not supported.');
+}
+*/
+
+if('serviceWorker' in navigator) {
+	window.addEventListener('load', function() {
+		navigator.serviceWorker.register('/serviceworker.php',{scope:'/'}).then(function(registration) {
+			console.log('SW registered.');
+		}, function(err) {
+			console.log('SW registration failed: ', err);
+		});
+	});
 }
