@@ -86,7 +86,8 @@ $lng_flag = if not null append language code to link
 $path = a variable found in the config file that represents a partial pathway to the style sheet, not including and details about AWS, language code, or language direction)
 $dir_flag = if not null append language direction to link
 */
-function build_css_link($aws_flag = null, $lng_flag = null, $path, $dir_flag = null){
+//function build_css_link($aws_flag = null, $lng_flag = null, $path, $dir_flag = null){
+function build_css_link($aws_flag, $lng_flag, $path, $dir_flag){
 	global $CFG, $CLEAN;
 
 	/* If $path is not found in the config.php file then do nothing. */
@@ -149,7 +150,8 @@ $lng_flag = if not null append language code to link
 $path = a variable found in the config file that represents a partial pathway to the style sheet, not including and details about AWS, language code, or language direction)
 $dir_flag = if not null append language direction to link
 */
-function build_css_link2($aws_flag = null, $lng_flag = null, $path, $dir_flag = null){
+//function build_css_link2($aws_flag = null, $lng_flag = null, $path, $dir_flag = null){
+function build_css_link2($aws_flag, $lng_flag, $path, $dir_flag){
 	global $CFG, $CLEAN;
 
 	/* If $path is not found in the config.php file then do nothing. */
@@ -189,7 +191,8 @@ $aws_flag = if not null append AWS link.
 $lng_flag = if not null append language code to link.
 $path = a variable found in the config file that represents a partial pathway to the style sheet. (Not including details about AWS, language code, or language direction.)
 */
-function build_js_link($aws_flag = null, $lng_flag = null, $path){
+//function build_js_link($aws_flag = null, $lng_flag = null, $path){
+function build_js_link($aws_flag, $lng_flag, $path){
 	global $CFG, $CLEAN;
 
 	/* If $path is not found in the config.php file then do nothing. */
