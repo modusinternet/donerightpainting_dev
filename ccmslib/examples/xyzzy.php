@@ -7,7 +7,8 @@ $dir_flag = if not null append language direction to link
 $ver_numb, this is very helpful when trying to update files like css and js that don't get called by serviceWorker after they are stored. (empty = do not append '?v=some_number' to the URL.)
 Example: {CCMS_LIB:examples/sample.php;FUNC:example_build_css_link("","","CSS-01","1", "1")}
 */
-function example_build_css_link($aws_flag = null, $lng_flag = null, $path, $dir_flag = null, $ver_numb = null){
+//function example_build_css_link($aws_flag = null, $lng_flag = null, $path, $dir_flag = null, $ver_numb = null){
+function example_build_css_link($aws_flag, $lng_flag, $path, $dir_flag, $ver_numb){
 	global $CFG;
 	// If $path is not found in the config.php file then do nothing.
 	if(!isset($CFG["RES"][$path])) return;
@@ -63,7 +64,8 @@ $dir_flag = if not null append language direction to link
 $ver_numb, this is very helpful when trying to update files like css and js that don't get called by serviceWorker after they are stored. (empty = do not append '?v=some_number' to the URL.)
 Example: {CCMS_LIB:examples/sample.php;FUNC:example_build_js_link("","","JS-01","","1")}
 */
-function example_build_js_link($aws_flag = null, $lng_flag = null, $path, $dir_flag = null, $ver_numb = null){
+//function example_build_js_link($aws_flag = null, $lng_flag = null, $path, $dir_flag = null, $ver_numb = null){
+function example_build_js_link($aws_flag, $lng_flag, $path, $dir_flag, $ver_numb){
 	global $CFG;
 	// If $path is not found in the config.php file then do nothing.
 	if(!isset($CFG["RES"][$path])) return;
@@ -95,7 +97,8 @@ function example_build_js_link($aws_flag = null, $lng_flag = null, $path, $dir_f
 $aws_flag = if not null append AWS link.
 $path = a variable found in the config file that represents a partial pathway to the style sheet. (Not including details about AWS, language code, or language direction.)
 */
-function example_build_js_sri($aws_flag = null, $path){
+//function example_build_js_sri($aws_flag = null, $path){
+function example_build_js_sri($aws_flag, $path){
 	/*
 	global $CFG;
 

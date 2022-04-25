@@ -175,7 +175,7 @@ AddOutputFilterByType DEFLATE application/x-javascript
 
 	# Custodian CMS example URL Rewrite.  (This code is not necessary for CCMS to function properly, and could be removed if desired.  It is only here to aid the 'example' templates with the loading of a very handy ServiceWorker.  I had to call this template with a .php extension because some webservers running Nginx don't work properly when parsing incoming requests with only 2 letter extensions like .js.)
 	# ------------------------------
-	RewriteRule ^serviceworker\.php$ /index.php?ccms_tpl=/_js/serviceworker.php [L,NC]
+	RewriteRule ^serviceworker\.php$ /index.php?ccms_tpl=/examples/_js/serviceworker.php [L,NC]
 
 	# Custodian CMS URL Rewrite
 	# ------------------------------
@@ -209,11 +209,18 @@ AddOutputFilterByType DEFLATE application/x-javascript
 	# Default expiration: 1 day after request	ExpiresDefault "access plus 1 month"
 
 	# CSS and JS expiration: 2 weeks after request
-	ExpiresByType text/css "access plus 2 weeks"
-	ExpiresByType text/javascript "access plus 2 weeks"
-	ExpiresByType text/x-javascript "access plus 2 weeks"
-	ExpiresByType application/javascript "access plus 2 weeks"
-	ExpiresByType application/x-javascript "access plus 2 weeks"
+	#ExpiresByType text/css "access plus 2 weeks"
+	#ExpiresByType text/javascript "access plus 2 weeks"
+	#ExpiresByType text/x-javascript "access plus 2 weeks"
+	#ExpiresByType application/javascript "access plus 2 weeks"
+	#ExpiresByType application/x-javascript "access plus 2 weeks"
+
+	# CSS and JS expiration: 6 months after request
+	ExpiresByType text/css "access plus 6 months"
+	ExpiresByType text/javascript "access plus 6 months"
+	ExpiresByType text/x-javascript "access plus 6 months"
+	ExpiresByType application/javascript "access plus 6 months"
+	ExpiresByType application/x-javascript "access plus 6 months"
 
 	# Image files expiration: 1 month after request
 	ExpiresByType image/bmp "access plus 1 month"
@@ -245,7 +252,6 @@ AddOutputFilterByType DEFLATE application/x-javascript
 	ExpiresByType audio/x-wav "access plus 1 month"
 
 	# Movie files expiration: 1 month after request
-	ExpiresByType application/x-shockwave-flash "access plus 1 month"
 	ExpiresByType x-world/x-vrml "access plus 1 month"
 	ExpiresByType video/x-msvideo "access plus 1 month"
 	ExpiresByType video/mpeg "access plus 1 month"
